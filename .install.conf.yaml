@@ -1,0 +1,21 @@
+# vim: set shiftwidth=4 tabstop=4 softtabstop=4 expandtab:
+- defaults:
+    link:
+        create: true
+        link: true
+    shell:
+        quiet: true
+    
+
+- clean: ["~", "~/.config"]
+
+- link:
+    ~/.profile: shell/dot_profile
+    ~/.bashrc: bash/dot_bashrc
+    ~/.config/tmux: tmux/
+    ~/.config/uv/uv.toml: uv/uv.toml
+    ~/.npmrc: npm/dot_npmrc
+    ~/.gitignore_global: git/dot_gitignore_global
+    ~/.shell/: shell/dot_shell/
+    ~/.bash/: bash/dot_bash/
+    
