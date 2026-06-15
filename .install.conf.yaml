@@ -18,4 +18,5 @@
     ~/.gitignore_global: git/dot_gitignore_global
     ~/.shell/: shell/dot_shell/
     ~/.bash/: bash/dot_bash/
+    ~/.inputrc: dot_inputrc
     

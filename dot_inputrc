@@ -1,0 +1,21 @@
+# Setup vi mode
+set show-mode-in-prompt on
+set editing-mode vi
+set vi-cmd-mode-string "\1\e[2 q\2"
+set vi-ins-mode-string "\1\e[6 q\2"
+$if mode=vi
+    set keymap vi-insert
+    "\e.": insert-last-argument
+    "\e_": insert-last-argument
+    # current mapping can be checked with "bind -m vi -q edit-and-execute-command"
+    "\C-x\C-e": edit-and-execute-command
+
+    set keymap vi-command
+    "\e.": insert-last-argument
+    "\e_": insert-last-argument
+$endif
+set keymap vi-insert
+
+# Enable partial search, i.e. history search that matches the current promptt
+"\e[A": history-search-backward
+"\e[B": history-search-forward
