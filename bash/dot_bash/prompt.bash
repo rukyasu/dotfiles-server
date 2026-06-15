@@ -27,3 +27,7 @@ else
 fi
 
 unset color_prompt force_color_prompt
+
+# Resets the cursor to a steady block before running a command
+# Otherwise bash vi mode launches vim and with incorrect cursor
+PS0="\e[2 q"
