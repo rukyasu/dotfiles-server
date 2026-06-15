@@ -1,0 +1,4 @@
+" Change cursor shape based on mode
+let &t_SI = "\e[5 q" " Thin vertical line (SI = Insert mode)
+let &t_SR = "\e[3 q" " Underline (SR = Replace mode)
+let &t_EI = "\e[2 q" " Solid block (EI = Normal/End Insert mode)
